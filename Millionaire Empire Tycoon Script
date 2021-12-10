@@ -1,0 +1,12 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("Millionaire Empire Tycoon")
+
+local b = w:CreateFolder("Main")
+
+b:Button("Give Infinite Money",function()
+    local A_1 = "Cash"
+    local A_2 = 1000000000000000000
+    local Event = game:GetService("ReplicatedStorage").Events.CrateClaim
+    Event:FireServer(A_1, A_2)
+end)
